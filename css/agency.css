@@ -244,7 +244,7 @@ header .intro-text {
   padding-top: 100px;
 }
 header .intro-text .intro-lead-in {
-  font-family: "Pacifico", sans-serif;
+  font-family: "Sansita", sans-serif;
   font-style: italic;
   font-size: 22px;
   line-height: 22px;
@@ -264,7 +264,7 @@ header .intro-text .intro-heading {
     padding-bottom: 200px;
   }
   header .intro-text .intro-lead-in {
-    font-family: "Pacifico", sans-serif;
+    font-family: "Sansita", sans-serif;
     font-style: italic;
     font-size: 40px;
     line-height: 40px;
@@ -288,8 +288,8 @@ section h2.section-heading {
   margin-bottom: 15px;
 }
 section h3.section-subheading {
-  font-size: 16px;
-  font-family: "Pacifico", sans-serif;
+  font-size: 25px;
+  font-family: "Sansita", sans-serif;
   text-transform: none;
   font-style: italic;
   font-weight: 400;
@@ -303,6 +303,17 @@ section h3.section-subheading {
 .service-heading {
   margin: 15px 0;
   text-transform: none;
+  font-size: 25px;
+}
+.service-text {
+  font-size: 20px;
+}
+.service-icon {
+  height: 70%;
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #portfolio .portfolio-item {
   margin: 0 0 15px;
@@ -356,7 +367,7 @@ section h3.section-subheading {
   margin: 0;
 }
 #portfolio .portfolio-item .portfolio-caption p {
-  font-family: "Pacifico", sans-serif;
+  font-family: "Sansita", sans-serif;
   font-style: italic;
   font-size: 16px;
   margin: 0;
@@ -585,27 +596,27 @@ section#contact ::-webkit-input-placeholder {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #eeeeee;
+  color: #c1c1c1;
 }
 section#contact :-moz-placeholder {
   /* Firefox 18- */
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #eeeeee;
+  color: #c1c1c1;
 }
 section#contact ::-moz-placeholder {
   /* Firefox 19+ */
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #eeeeee;
+  color: #c1c1c1;
 }
 section#contact :-ms-input-placeholder {
   font-family: "Quicksand", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #eeeeee;
+  color: #c1c1c1;
 }
 section#contact .text-danger {
   color: #e74c3c;
@@ -679,7 +690,7 @@ ul.social-buttons li a:active {
 }
 .portfolio-modal .modal-content p.item-intro {
   margin: 20px 0 30px;
-  font-family: "Pacifico", sans-serif;
+  font-family: "Sansita", sans-serif;
   font-style: italic;
   font-size: 16px;
 }
