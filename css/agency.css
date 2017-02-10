@@ -48,7 +48,6 @@ body {
   background: #F89C31;
   border-radius: 100%;
   z-index: 10;
-  animation: 5s scowl infinite;
 }
 .mascot .face .eyes .left,
 .mascot .face .eyes .right {
@@ -100,17 +99,6 @@ body {
   border-bottom-right-radius: 20px 10px;
   z-index: 5;
 }
-.mascot .face .nose:after {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 10px;
-  height: 20px;
-  background: #000;
-}
 .mascot .face .mouth {
   position: absolute;
   bottom: 0;
@@ -128,9 +116,9 @@ body {
   display: block;
   content: '';
   position: absolute;
-  top: 15px;
-  left: 50%;
-  transform: translate(-50%, 0);
+  transform: rotate(180deg);
+  top: -10px;
+  left: 15px;
   width: 50px;
   height: 50px;
   border-top: 8px solid #000;
@@ -309,17 +297,6 @@ body {
   background: #00f155;
   border-radius: 100%;
   z-index: -3;
-}
-@keyframes wag {
-  0% {
-    transform: rotate(-45deg);
-  }
-  50% {
-    transform: rotate(-55deg);
-  }
-  100% {
-    transform: rotate(-45deg);
-  }
 }
 @keyframes scowl {
   0% {
