@@ -343,17 +343,7 @@ body {
 * {
   box-sizing: border-box;
 }
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-.container {
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(#3e6690 0%, #111e34 100%);
-}
-.canvas {
+.box_container {
   position: absolute;
   top: 40%;
   left: 70%;
