@@ -1,13 +1,14 @@
 /*!
  */
 body {
-  background: #A4FFC4;
+  background: #FFF;
 }
 .mascot {
   position: absolute;
-  top: 60%;
-  left: 40%;
+  top: 70%;
+  left: 20%;
   transform: translate(-50%, -50%);
+  transform: scale(1.5, 1.5);
 }
 .mascot .head {
   position: relative;
@@ -21,19 +22,49 @@ body {
   height: 150px;
   background: #FAB96A;
   border: 8px solid #000;
-  border-top-left-radius: 100px 100px;
-  border-top-right-radius: 100px 100px;
-  border-bottom-left-radius: 100px 50px;
-  border-bottom-right-radius: 100px 50px;
-  box-shadow: inset 0 16px 0 4px #ee8408;
+  border-top-left-radius: 150px 100px;
+  border-top-right-radius: 150px 100px;
+  border-bottom-left-radius: 150px 100px;
+  border-bottom-right-radius: 150px 100px;
+  box-shadow: inset 0 10px 0 4px #ee8408;
   overflow: hidden;
   z-index: 2;
 }
+.mascot .face .hair .left {
+  position: absolute;
+  top: -60px;
+  left: -30px;
+  width: 170px;
+  height: 100px;
+  background: #CB1B2E;
+  border-top-left-radius: 150px 100px;
+  border-top-right-radius: 150px 100px;
+  border-bottom-left-radius: 150px 100px;
+  border-bottom-right-radius: 150px 100px;
+  transform: rotate(-20deg);
+  overflow: hidden;
+  z-index: 9;
+}
+.mascot .face .hair .right {
+  position: absolute;
+  top: -60px;
+  right: -40px;
+  width: 125px;
+  height: 100px;
+  background: #CB1B2E;
+  border-top-left-radius: 200px 200px;
+  border-top-right-radius: 200px 200px;
+  border-bottom-left-radius: 200px 200px;
+  border-bottom-right-radius: 200px 200px;
+  transform: rotate(30deg);
+  overflow: hidden;
+  z-index: 8;
+}
 .mascot .face .eyes {
   position: absolute;
-  top: 55px;
+  top: 60px;
   width: 100%;
-  height: 100px;
+  height: 90px;
 }
 .mascot .face .eyes:before {
   display: block;
@@ -50,7 +81,7 @@ body {
 .mascot .face .eyes .left,
 .mascot .face .eyes .right {
   position: absolute;
-  top: -25px;
+  top: -20px;
 }
 .mascot .face .eyes .left:before,
 .mascot .face .eyes .right:before {
@@ -125,42 +156,42 @@ body {
 }
 .mascot .ears .left {
   position: absolute;
-  left: -18px;
-  top: 40px;
+  left: -27px;
+  top: 55px;
   width: 40px;
   height: 32px;
-  background-color: #f8a239;
+  background-color: #ee8408;
   border: 8px solid #000;
   border-bottom-style: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 36px;
   border-top-left-radius: 40px;
-  transform: rotate(-65deg);
-  -webkit-transform: rotate(-65deg);
-  -moz-transform: rotate(-65deg);
-  -ms-transform: rotate(-65deg);
-  -o-transform: rotate(-65deg);
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
   z-index: 2;
 }
 .mascot .ears .right {
   position: absolute;
-  top: 40px;
-  right: -18px;
+  top: 55px;
+  right: -27px;
   width: 40px;
   height: 32px;
-  background: #f8a239;
+  background: #ee8408;
   border: 8px solid #000;
   border-bottom-style: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top-right-radius: 36px;
   border-top-left-radius: 40px;
-  transform: rotate(65deg);
-  -webkit-transform: rotate(65deg);
-  -moz-transform: rotate(65deg);
-  -ms-transform: rotate(65deg);
-  -o-transform: rotate(65deg);
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
   z-index: 2;
 }
 .mascot .suit {
@@ -284,16 +315,6 @@ body {
   border-bottom-left-radius: 40px;
   box-shadow: inset 0 10px 0 5px #0C5C9C;
   z-index: -1;
-}
-.mascot .shadow {
-  position: absolute;
-  bottom: -20px;
-  left: -130px;
-  width: 380px;
-  height: 80px;
-  background: #00f155;
-  border-radius: 100%;
-  z-index: -3;
 }
 @keyframes scowl {
   0% {
