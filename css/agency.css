@@ -5,8 +5,7 @@ body {
 }
 .mascot {
   position: absolute;
-  top: 70%;
-  left: 20%;
+  top: -200%;
   transform: translate(-50%, -50%);
   transform: scale(1.5, 1.5);
 }
@@ -26,7 +25,6 @@ body {
   border-top-right-radius: 150px 100px;
   border-bottom-left-radius: 150px 100px;
   border-bottom-right-radius: 150px 100px;
-  box-shadow: inset 0 10px 0 4px #ee8408;
   overflow: hidden;
   z-index: 2;
 }
@@ -160,7 +158,7 @@ body {
   top: 55px;
   width: 40px;
   height: 32px;
-  background-color: #ee8408;
+  background-color: #FAB96A;
   border: 8px solid #000;
   border-bottom-style: none;
   border-bottom-left-radius: 20px;
@@ -180,7 +178,7 @@ body {
   right: -27px;
   width: 40px;
   height: 32px;
-  background: #ee8408;
+  background: #FAB96A;
   border: 8px solid #000;
   border-bottom-style: none;
   border-bottom-left-radius: 20px;
@@ -341,132 +339,55 @@ body {
     transform: rotate(0);
   }
 }
-* {
-  box-sizing: border-box;
-}
-.box_container {
-  position: absolute;
-  top: 40%;
-  left: 70%;
-  transform: translate(-50%, -50%);
-}
-.box {
-  width: 200px;
-  margin: 0 auto;
+/* CSS talk bubble */
+.talk-bubble {
+  margin: 40px;
+  display: inline-block;
   position: relative;
+  width: 200px;
+  height: auto;
+  min-height: 100px;
+  background-color: #bb133e;
+  border: 4px solid black;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
 }
-.box .back {
-  width: 160px;
-  height: 160px;
-}
-.box .back:before,
-.box .back:after {
-  content: "";
-  display: block;
-  float: left;
-}
-.box .back:before {
-  width: 80px;
-  height: 110px;
-  background: #4594cf;
-  transform: skewY(-25deg);
-}
-.box .back:after {
-  width: 80px;
-  height: 110px;
-  background: #50a3e0;
-  transform: skewY(25deg);
-}
-.box .front {
-  width: 160px;
-  height: 110px;
-  position: absolute;
-  top: 38px;
-  left: 0;
-  z-index: 3;
-}
-.box .front:before,
-.box .front:after {
-  content: "";
-  display: block;
-  float: left;
-  box-shadow: 0 10px 10px -7px rgba(0, 0, 0, 0.5);
-}
-.box .front:before {
-  width: 80px;
-  height: 110px;
-  background: #50a3e0;
-  transform: skewY(25deg);
-}
-.box .front:after {
-  width: 80px;
-  height: 110px;
-  background: #4595d0;
-  transform: skewY(-25deg);
-}
-.box .shines {
-  width: 160px;
-  height: 110px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-}
-.box .shines .core {
-  width: 10px;
-  height: 10px;
-  margin: 60px auto 0 auto;
-  background: #fff;
-  border-radius: 100%;
-  box-shadow: 0 0 30px 40px rgba(255, 255, 255, 0.8);
-}
-.box .shines .core-shade {
-  width: 50px;
-  height: 100px;
-  margin: -100px auto 0 auto;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 100%;
-  box-shadow: 0 0 30px 40px rgba(255, 255, 255, 0.1);
-  animation: core-shading 2s infinite;
-}
-.box .shines .raising {
+/* Right triangle placed top right flush. */
+.btm-left:before {
+  content: ' ';
   position: absolute;
   width: 0;
-  height: 600px;
-  bottom: 30px;
-  left: 50%;
-  z-index: 2;
-  box-shadow: 0 0 50px 30px rgba(255, 255, 255, 0.3);
+  height: 0;
+  left: -29px;
+  right: auto;
+  top: auto;
+  bottom: -4px;
+  border: 26px solid;
+  border-color: transparent transparent black transparent;
 }
-.box .shines .light {
+.btm-left:after {
+  content: ' ';
   position: absolute;
   width: 0;
-  height: 600px;
-  bottom: 30px;
-  left: 50%;
-  z-index: 2;
-  box-shadow: 0 0 40px 10px rgba(240, 208, 0, 0.2);
-  animation: shine 5s 0s infinite;
+  height: 0;
+  left: -20px;
+  right: auto;
+  top: auto;
+  bottom: 0px;
+  border: 20px solid;
+  border-color: transparent transparent #bb133e transparent;
 }
-.box .shines .shade {
-  position: absolute;
-  width: 0;
-  height: 600px;
-  bottom: 30px;
-  z-index: 2;
-  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.1);
+/* talk bubble contents */
+.talktext {
+  padding: 1em;
+  text-align: left;
+  line-height: 1.5em;
 }
-.box .shines .shade.one {
-  left: 40%;
-  animation: shade-one 5s 0s infinite;
-}
-.box .shines .shade.two {
-  left: 46%;
-  animation: shade-two 5s 0s infinite;
-}
-.box .shines .shade.three {
-  left: 53%;
-  animation: shade-three 5s 0s infinite;
+.talktext p {
+  /* remove webkit p margins */
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
 }
 body {
   overflow-x: hidden;
@@ -707,9 +628,10 @@ header {
   -o-background-size: cover;
   text-align: center;
   color: white;
+  height: 100vh;
 }
 header .intro-text {
-  padding-top: 100px;
+  padding-top: 1000px;
 }
 header .intro-text .intro-lead-in {
   font-family: "Sansita", sans-serif;
@@ -725,6 +647,21 @@ header .intro-text .intro-heading {
   font-size: 50px;
   line-height: 50px;
   margin-bottom: 25px;
+}
+header .mascot-container {
+  padding-top: 0px;
+  position: relative;
+}
+header .chat-bubble-container {
+  position: relative;
+}
+header-container {
+  height: 100vh;
+}
+@media (min-width: 768px) {
+  header-container {
+    height: 100vh;
+  }
 }
 @media (min-width: 768px) {
   header .intro-text {
