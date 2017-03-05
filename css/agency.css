@@ -1,11 +1,7 @@
 /*!
  */
-body {
-  background: #FFF;
-}
 .mascot {
   position: absolute;
-  top: -200%;
   transform: translate(-50%, -50%);
   transform: scale(1.5, 1.5);
 }
@@ -651,6 +647,9 @@ header .intro-text .intro-heading {
 header .mascot-container {
   padding-top: 0px;
   position: relative;
+  height: 50%;
+  top: -50vh;
+  left: 10vw;
 }
 header .chat-bubble-container {
   position: relative;
