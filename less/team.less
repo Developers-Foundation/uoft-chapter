@@ -39,11 +39,20 @@ member {
   &:hover member {
     flex: initial;
     width: 10%;
+    .compressed {
+      top: 30vh;
+      left: -3vh;
+      h2 {
+        transform: rotate(-90deg);
+        transition: 0.3s ease 0s;
+        font-size: 2em;
+      }
+    }
   }
   
   member:hover {
     width: 60%;
-    h2 {
+    h2, img {
       opacity: 0;
       transition: opacity 0.3s ease 0s;
     }
@@ -62,13 +71,54 @@ member {
   p, h3 { 
     margin: 0 0 1em 0; 
   }
+  img {
+    margin: 0 auto;
+    border: 7px solid white;
+  }
 }
 
 .compressed {
   top: 2vh;
   position: absolute;
   text-align: center;
+  min-width: 12em;
   width: 90%;
   margin: 0;
-  font-size: 2vh;
+  h2 {
+    font-size: 2.5em; 
+  }
+  img {
+    margin: 0 auto;
+    border: 7px solid white;
+  }
+}
+
+@media (max-width: 900px) {
+  member {
+    padding: 2vh 3vw; 
+    &:hover compressed { 
+      opacity: 0; 
+    }
+  }
+
+  .compressed {
+    transform: rotate(90deg);
+    top: 23vh;
+    min-width: 12em;
+    text-align: left;
+    transform: rotate(-90deg);
+    transform-origin: 0 0 0;
+    opacity: 1;
+    h2 {
+      font-size: 2em; 
+    }
+  }
+
+  .expanded { 
+    max-height: calc(72%);
+    overflow-y: auto;
+    p {      
+      width: 50vw; 
+    }
+  }
 }
