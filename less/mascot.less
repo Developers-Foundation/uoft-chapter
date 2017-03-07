@@ -8,13 +8,10 @@
 @light-blue: #AAE0FB;
 @red: #CB1B2E;
 
-body {
-  background: @white;
-}
-
 .mascot {
   position: absolute;
-  top: -200%;
+  bottom: 35px;
+  left: 10vw;
   transform: translate(-50%, -50%);
   transform: scale(1.5,1.5);
   .head {
@@ -374,4 +371,41 @@ body {
   100% {
     transform: rotate(0);
   }   
+}
+
+@media(min-width:300px) {
+  .mascot {
+    transform: scale(0.75, 0.75);
+    bottom: -50px;
+    left: 22vw;
+    margin: auto;
+    transition: all .3s ease 0s;
+  }
+}
+
+@media(min-width:768px) {
+  .mascot {
+    transform: scale(1, 1);
+    bottom: -20px;
+    left: 10vw;
+    transition: all .3s ease 0s;
+  }
+}
+
+@media(min-width:992px) {
+  .mascot {
+    transform: scale(1, 1);
+    bottom: -20px;
+    left: 10vw;
+    transition: all .3s ease 0s;
+  }
+}
+
+@media(min-width:1200px) {
+  .mascot {
+    transform: scale(1.5, 1.5);
+    bottom: 35px;
+    left: 10vw;
+    transition: all .3s ease 0s;
+  }
 }
