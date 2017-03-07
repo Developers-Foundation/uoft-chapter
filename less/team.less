@@ -18,15 +18,30 @@ member {
     border-left: none;
   }
   
-  &:hover .expanded{
-    opacity: 1;
-    transition:  opacity 0.3s ease 0.3s;
+  &:hover {
+    width: 60%;
+    .headshot {
+      img {
+        width: 20vw;
+        transition: width 0.3s ease 0s;
+      }
+      margin: 20px;
+      transition: margin 0.3s ease 0s;
+    }
+    .compressed, {
+      opacity: 0;
+      transition: opacity 0.3s ease 0s;
+    }
+    .expanded{
+      opacity: 1;
+      transition:  opacity 0.3s ease 0.3s;
+    }
   }
 }
 
 .accordion {
   background: @uoft-blue;
-  width: 100vw;
+  width: 99vw;
   height: 80vh;
   list-style: none;
   position: relative;
@@ -52,11 +67,27 @@ member {
   
   member:hover {
     width: 60%;
-    h2, img {
-      opacity: 0;
-      transition: opacity 0.3s ease 0s;
-    }
-    
+  }
+}
+
+.headshot {
+  float: left;
+  
+  img {
+    margin: 0 auto;
+  }
+}
+
+.compressed {
+  top: 40vh;
+  position: absolute;
+  text-align: center;
+  min-width: 12em;
+  width: 90%;
+  margin: 0;
+  clear: both;
+  h2 {
+    font-size: 2.5em; 
   }
 }
 
@@ -70,26 +101,6 @@ member {
   }
   p, h3 { 
     margin: 0 0 1em 0; 
-  }
-  img {
-    margin: 0 auto;
-    border: 7px solid white;
-  }
-}
-
-.compressed {
-  top: 2vh;
-  position: absolute;
-  text-align: center;
-  min-width: 12em;
-  width: 90%;
-  margin: 0;
-  h2 {
-    font-size: 2.5em; 
-  }
-  img {
-    margin: 0 auto;
-    border: 7px solid white;
   }
 }
 
