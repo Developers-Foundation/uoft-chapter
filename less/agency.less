@@ -3,6 +3,7 @@
 @import "mascot.less";
 @import "chat_bubble.less";
 
+
 // Global Components
 
 body {
@@ -184,27 +185,6 @@ header {
     text-align: center;
     color: white;
     height: 100vh;
-    .intro-text {
-        padding-top: 1000px;
-        .intro-lead-in {
-            .serif-font;
-            font-style: italic;
-            font-size: 22px;
-            line-height: 22px;
-            margin-bottom: 25px;
-        }
-        .intro-heading {
-            .heading-font;
-            font-weight: 700;
-            font-size: 50px;
-            line-height: 50px;
-            margin-bottom: 25px;
-        }
-    }
-  
-  .chat-bubble-container{
-    position: relative;
-  }
 }
 
 .container {
@@ -225,15 +205,25 @@ header-container {
 
 @media(min-width:768px) {
     header {
+        .intro-text-container {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 25vw;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
         .intro-text {
             padding-top: 300px;
             padding-bottom: 200px;
+            font-family: "Roboto Mono", monospace;
+            font-size: 40px;
+            font-weight: 100;
+            color: white;
+            line-height: 40px;
+            margin-bottom: 25px;
             .intro-lead-in {
-                .serif-font;
-                font-style: italic;
-                font-size: 40px;
-                line-height: 40px;
-                margin-bottom: 25px;
             }
             .intro-heading {
                 .heading-font;
@@ -243,6 +233,9 @@ header-container {
                 margin-bottom: 50px;
             }
         }
+      .dud {
+        color: grey;
+      }
     }
 }
 
