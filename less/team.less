@@ -1,0 +1,135 @@
+@import "variables.less";
+
+.accordion > * { transition: all .3s ease 0s; }
+
+member {
+  flex: initial;
+  width: 20%;
+  height: 80vh;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  vertical-align: bottom;
+  box-sizing: border-box;
+  padding: 2vh 1vw;
+  position: relative;
+  border-left: solid;
+  &:nth-child(1){
+    border-left: none;
+  }
+  
+  &:hover {
+    width: 60%;
+    .headshot {
+      img {
+        width: 20vw;
+        transition: width 0.3s ease 0s;
+      }
+      margin: 20px;
+      transition: margin 0.3s ease 0s;
+    }
+    .compressed, {
+      opacity: 0;
+      transition: opacity 0.3s ease 0s;
+    }
+    .expanded{
+      opacity: 1;
+      transition:  opacity 0.3s ease 0.3s;
+    }
+  }
+}
+
+.accordion {
+  background: @uoft-blue;
+  width: 99vw;
+  height: 80vh;
+  list-style: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  overflow: hidden;
+  
+  &:hover member {
+    flex: initial;
+    width: 10%;
+    .compressed {
+      top: 30vh;
+      left: -3vh;
+      h2 {
+        transform: rotate(-90deg);
+        transition: 0.3s ease 0s;
+        font-size: 2em;
+      }
+    }
+  }
+  
+  member:hover {
+    width: 60%;
+  }
+}
+
+.headshot {
+  float: left;
+  
+  img {
+    margin: 0 auto;
+  }
+}
+
+.compressed {
+  top: 40vh;
+  position: absolute;
+  text-align: center;
+  min-width: 12em;
+  width: 90%;
+  margin: 0;
+  clear: both;
+  h2 {
+    font-size: 2.5em; 
+  }
+}
+
+.expanded {
+  opacity: 0;
+  transition: opacity .2s ease 0;
+  text-align: left;
+  width: 58vw;
+  p {
+    width: 40vw;
+  }
+  p, h3 { 
+    margin: 0 0 1em 0; 
+  }
+}
+
+@media (max-width: 900px) {
+  member {
+    padding: 2vh 3vw; 
+    &:hover compressed { 
+      opacity: 0; 
+    }
+  }
+
+  .compressed {
+    transform: rotate(90deg);
+    top: 23vh;
+    min-width: 12em;
+    text-align: left;
+    transform: rotate(-90deg);
+    transform-origin: 0 0 0;
+    opacity: 1;
+    h2 {
+      font-size: 2em; 
+    }
+  }
+
+  .expanded { 
+    max-height: calc(72%);
+    overflow-y: auto;
+    p {      
+      width: 50vw; 
+    }
+  }
+}

@@ -1,8 +1,7 @@
 @import "variables.less";
 @import "mixins.less";
 @import "mascot.less";
-@import "chat_bubble.less";
-
+@import "team.less";
 
 // Global Components
 
@@ -187,22 +186,6 @@ header {
     height: 100vh;
 }
 
-.container {
-  position: relative;
-}
-
-header-container {
-  height: 100vh;
-}
-
-
-@media(min-width:768px) {
-  header-container {
-    height: 100vh;
-  }
-}
-
-
 @media(min-width:768px) {
     header {
         .intro-text-container {
@@ -255,12 +238,6 @@ section {
         font-style: italic;
         font-weight: 400;
         margin-bottom: 75px;
-    }
-}
-
-@media(min-width:768px) {
-    section {
-        padding: 150px 0;
     }
 }
 
@@ -547,7 +524,7 @@ section {
     margin-bottom: 50px;
     img {
         margin: 0 auto;
-        border: 7px solid white;
+//        border: 7px solid white;
     }
     h4 {
         margin-top: 25px;
