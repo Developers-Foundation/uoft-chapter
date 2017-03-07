@@ -10,7 +10,8 @@
 
 .mascot {
   position: absolute;
-  
+  bottom: 35px;
+  left: 10vw;
   transform: translate(-50%, -50%);
   transform: scale(1.5,1.5);
   .head {
@@ -370,4 +371,37 @@
   100% {
     transform: rotate(0);
   }   
+}
+
+@media(min-width:300px) {
+  .mascot {
+    transform: scale(0.75, 0.75);
+    bottom: -50px;
+    left: 22vw;
+    margin: auto;
+  }
+}
+
+@media(min-width:768px) {
+  .mascot {
+    transform: scale(1, 1);
+    bottom: -20px;
+    left: 10vw;
+  }
+}
+
+@media(min-width:992px) {
+  .mascot {
+    transform: scale(1, 1);
+    bottom: -20px;
+    left: 10vw;
+  }
+}
+
+@media(min-width:1200px) {
+  .mascot {
+    transform: scale(1.5, 1.5);
+    bottom: 35px;
+    left: 10vw;
+  }
 }
