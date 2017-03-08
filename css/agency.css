@@ -776,6 +776,7 @@ section h2.section-heading {
   margin-bottom: 15px;
 }
 section h3.section-subheading {
+  display: none;
   font-size: 25px;
   font-family: "Sansita", sans-serif;
   text-transform: none;
