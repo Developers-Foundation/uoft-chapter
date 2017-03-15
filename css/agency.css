@@ -375,7 +375,7 @@
 }
 member {
   flex: initial;
-  width: 20%;
+  width: 25%;
   height: 80vh;
   text-align: center;
   color: #fff;
@@ -433,8 +433,11 @@ member:hover .expanded {
   transition: 0.3s ease 0s;
   font-size: 2em;
 }
+.accordion:hover member .compressed .responsive-position {
+  opacity: 0;
+}
 .accordion member:hover {
-  width: 60%;
+  width: 70%;
 }
 .headshot {
   float: left;
@@ -443,7 +446,7 @@ member:hover .expanded {
   margin: 0 auto;
 }
 .compressed {
-  top: 40vh;
+  top: 50vh;
   position: absolute;
   text-align: center;
   min-width: 12em;
@@ -460,12 +463,14 @@ member:hover .expanded {
   text-align: left;
   width: 58vw;
 }
-.expanded p {
-  width: 40vw;
-}
 .expanded p,
 .expanded h3 {
   margin: 0 0 1em 0;
+}
+.expanded pre {
+  max-height: 50vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 @media (max-width: 900px) {
   member {
