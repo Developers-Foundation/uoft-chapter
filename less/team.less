@@ -4,7 +4,7 @@
 
 member {
   flex: initial;
-  width: 20%;
+  width: 25%;
   height: 80vh;
   text-align: center;
   color: #fff;
@@ -62,11 +62,14 @@ member {
         transition: 0.3s ease 0s;
         font-size: 2em;
       }
+      h3 {
+        opacity: 0;
+      }
     }
   }
   
   member:hover {
-    width: 60%;
+    width: 70%;
   }
 }
 
@@ -79,7 +82,7 @@ member {
 }
 
 .compressed {
-  top: 40vh;
+  top: 50vh;
   position: absolute;
   text-align: center;
   min-width: 12em;
@@ -96,11 +99,13 @@ member {
   transition: opacity .2s ease 0;
   text-align: left;
   width: 58vw;
-  p {
-    width: 40vw;
-  }
   p, h3 { 
     margin: 0 0 1em 0; 
+  }
+  pre {
+    max-height: 50vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 }
 
