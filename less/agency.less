@@ -521,6 +521,92 @@ section {
     }
 }
 
+// Mission statement section
+.ms{
+    height: 600px;
+}
+
+.mascot-wrapper{
+    position: relative;
+    right: 5vw;
+    height: 270px;
+}
+
+@media(min-width:1200px){
+    .mascot-wrapper{
+        top: 10vh;
+    }
+}
+
+.text-bubble{
+    position:relative;
+    height: 270px;
+}
+
+.triangle-border {
+  position:relative;
+  padding: 50px 15px;
+  margin: 50px 0px;
+  border:5px solid @uoft-blue;
+  color:#333;
+  background:#fff;
+  /* css3 */
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+
+.triangle-border.right {
+  margin-right:50px;
+}
+
+.triangle-border:before {
+  content:"";
+  position:absolute;
+  bottom:-20px; /* value = - border-top-width - border-bottom-width */
+  left:40px; /* controls horizontal position */
+  border-width:20px 20px 0;
+  border-style:solid;
+  border-color:@uoft-blue transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+/* creates the smaller  triangle */
+.triangle-border:after {
+  content:"";
+  position:absolute;
+  bottom:-13px; /* value = - border-top-width - border-bottom-width */
+  left:47px; /* value = (:before left) + (:before border-left) - (:after border-left) */
+  border-width:13px 13px 0;
+  border-style:solid;
+  border-color:@uoft-blue transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+
+/* creates the larger triangle */
+.triangle-border.right:before {
+  top:30px; /* controls vertical position */
+  bottom:auto;
+  left:auto;
+  right:-30px; /* value = - border-left-width - border-right-width */
+  border-width:15px 0 15px 30px;
+  border-color:transparent @uoft-blue;
+}
+
+/* creates the smaller  triangle */
+.triangle-border.right:after {
+  top:36px; /* value = (:before top) + (:before border-top) - (:after border-top) */
+  bottom:auto;
+  left:auto;
+  right:-21px; /* value = - border-left-width - border-right-width */
+  border-width:9px 0 9px 21px;
+  border-color:transparent #fff;
+}
+
 // Team Section
 
 .team-member {

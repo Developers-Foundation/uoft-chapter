@@ -2,8 +2,6 @@
  */
 .mascot {
   position: absolute;
-  bottom: 35px;
-  left: 10vw;
   transform: translate(-50%, -50%);
   transform: scale(1.5, 1.5);
 }
@@ -356,7 +354,7 @@
 }
 @media (min-width: 992px) {
   .mascot {
-    transform: scale(1, 1);
+    transform: scale(1.25, 1.25);
     bottom: -20px;
     left: 10vw;
     transition: all .3s ease 0s;
@@ -1035,6 +1033,89 @@ section h3.section-subheading {
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
   }
+}
+.ms {
+  height: 600px;
+}
+.mascot-wrapper {
+  position: relative;
+  right: 5vw;
+  height: 270px;
+}
+@media (min-width: 1200px) {
+  .mascot-wrapper {
+    top: 10vh;
+  }
+}
+.text-bubble {
+  position: relative;
+  height: 270px;
+}
+.triangle-border {
+  position: relative;
+  padding: 50px 15px;
+  margin: 50px 0px;
+  border: 5px solid #00204e;
+  color: #333;
+  background: #fff;
+  /* css3 */
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.triangle-border.right {
+  margin-right: 50px;
+}
+.triangle-border:before {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  /* value = - border-top-width - border-bottom-width */
+  left: 40px;
+  /* controls horizontal position */
+  border-width: 20px 20px 0;
+  border-style: solid;
+  border-color: #00204e transparent;
+  /* reduce the damage in FF3.0 */
+  display: block;
+  width: 0;
+}
+/* creates the smaller  triangle */
+.triangle-border:after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  /* value = - border-top-width - border-bottom-width */
+  left: 47px;
+  /* value = (:before left) + (:before border-left) - (:after border-left) */
+  border-width: 13px 13px 0;
+  border-style: solid;
+  border-color: #00204e transparent;
+  /* reduce the damage in FF3.0 */
+  display: block;
+  width: 0;
+}
+/* creates the larger triangle */
+.triangle-border.right:before {
+  top: 30px;
+  /* controls vertical position */
+  bottom: auto;
+  left: auto;
+  right: -30px;
+  /* value = - border-left-width - border-right-width */
+  border-width: 15px 0 15px 30px;
+  border-color: transparent #00204e;
+}
+/* creates the smaller  triangle */
+.triangle-border.right:after {
+  top: 36px;
+  /* value = (:before top) + (:before border-top) - (:after border-top) */
+  bottom: auto;
+  left: auto;
+  right: -21px;
+  /* value = - border-left-width - border-right-width */
+  border-width: 9px 0 9px 21px;
+  border-color: transparent #fff;
 }
 .team-member {
   text-align: center;
