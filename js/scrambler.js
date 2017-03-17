@@ -81,7 +81,7 @@ var TextScramble = function () {
 // Example
 // ——————————————————————————————————————————————————
 
-var phrases = ['welcome to our website!', 'scroll down', 'to know more about us'];
+var phrases = ['welcome to devfound uoft!', 'scroll down', 'to know more about us'];
 
 var el = document.querySelector('.intro-text');
 var fx = new TextScramble(el);
