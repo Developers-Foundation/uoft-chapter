@@ -423,12 +423,11 @@ member:hover .expanded {
   width: 10%;
 }
 .accordion:hover member .compressed {
-  top: 30vh;
-  left: -3vh;
+  top: 50vh;
+  left: 1vw;
+  width: 50vw;
 }
 .accordion:hover member .compressed h2 {
-  transform: rotate(-90deg);
-  transition: 0.3s ease 0s;
   font-size: 2em;
 }
 .accordion:hover member .compressed .responsive-position {
@@ -436,6 +435,16 @@ member:hover .expanded {
 }
 .accordion member:hover {
   width: 70%;
+}
+@media (min-width: 901px) {
+  .accordion:hover member .compressed {
+    top: 40vh;
+    left: -20vw;
+  }
+  .accordion:hover member .compressed h2 {
+    transform: rotate(-90deg);
+    transition: 0.3s ease 0s;
+  }
 }
 .headshot {
   float: left;
@@ -478,8 +487,6 @@ member:hover .expanded {
     opacity: 0;
   }
   .compressed {
-    transform: rotate(90deg);
-    top: 23vh;
     min-width: 12em;
     text-align: left;
     transform: rotate(-90deg);
@@ -749,14 +756,12 @@ header {
     margin: auto;
   }
   header .intro-text {
-    padding-top: 300px;
-    padding-bottom: 200px;
+    padding-top: 40vh;
     font-family: "Roboto Mono", monospace;
-    font-size: 40px;
+    font-size: 55px;
     font-weight: 100;
     color: white;
-    line-height: 40px;
-    margin-bottom: 25px;
+    line-height: 55px;
   }
   header .intro-text .intro-heading {
     font-family: "Quicksand", sans-serif;
